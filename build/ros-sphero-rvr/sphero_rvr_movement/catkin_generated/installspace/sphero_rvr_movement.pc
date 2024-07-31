@@ -1,0 +1,8 @@
+prefix=/home/sphero/sp/install
+
+Name: sphero_rvr_movement
+Description: Description of sphero_rvr_movement
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/sphero/sp/devel
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/sphero/sp/src/ros-sphero-rvr/serial_lib/include
+Libs: -L${prefix}/lib -lserial -lrt -lpthread
+Requires: 

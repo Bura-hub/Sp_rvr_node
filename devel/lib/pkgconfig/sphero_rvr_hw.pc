@@ -1,0 +1,8 @@
+prefix=/home/sphero/sp/devel
+
+Name: sphero_rvr_hw
+Description: Description of sphero_rvr_hw
+Version: 0.0.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime serial

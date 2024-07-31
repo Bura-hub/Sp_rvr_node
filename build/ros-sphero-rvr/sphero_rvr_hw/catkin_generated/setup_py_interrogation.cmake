@@ -1,0 +1,7 @@
+set(sphero_rvr_hw_SETUP_PY_SETUP_MODULE "distutils.core")
+set(sphero_rvr_hw_SETUP_PY_VERSION "0.0.2")
+set(sphero_rvr_hw_SETUP_PY_SCRIPTS "")
+set(sphero_rvr_hw_SETUP_PY_PACKAGES "sphero_sdk;sphero_sim")
+set(sphero_rvr_hw_SETUP_PY_PACKAGE_DIRS "scripts/sphero_sdk;scripts/sphero_sim")
+set(sphero_rvr_hw_SETUP_PY_MODULES "")
+set(sphero_rvr_hw_SETUP_PY_MODULE_DIRS "")

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="sphero_rvr">
+       
+  <xacro:include filename="$(find sphero_rvr_description)/model/sphero_rvr.urdf.xacro" />
+
+  <xacro:arg name="name" default="rvr" />
+    
+  <link name="odom" />
+
+  <xacro:sphero_rvr name="$(arg name)" parent="odom">
+    <origin xyz="0.0 0.0 0.0"/>
+  </xacro:sphero_rvr>
+
+</robot>

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o  -o /home/sphero/sp/devel/lib/serial/serial-test-timer   -L/home/sphero/sp/build/gtest  -Wl,-rpath,/home/sphero/sp/build/gtest:/home/sphero/sp/build/gtest/lib:/home/sphero/sp/devel/lib ../../../gtest/lib/libgtest.so /home/sphero/sp/devel/lib/libserial.so -lpthread -lrt -lpthread 

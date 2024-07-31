@@ -1,0 +1,31 @@
+<launch>
+    <!-- DEPRECATED -->
+
+    <!-- LAUNCH INTERFACE -->
+    <arg name="gui" default="false" />
+    <arg name="robot_name" default="rvr"/>
+    <arg name="use_rviz" default="true"/>
+    <arg name="use_joint_state_publisher" default="true"/>
+    <arg name="use_robot_sim" default="false"/>
+    <arg name="load_moveit" default="false"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro $(find sphero_rvr_description)/robot/sphero_rvr_in_world.urdf.xacro name:=$(arg robot_name)"/>
+
+    <group ns="$(arg robot_name)">
+        <group if="$(arg use_joint_state_publisher)">
+          <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+             <param name="use_gui" value="$(arg gui)"/>
+              <param name="robot_description" command="$(find xacro)/xacro $(find sphero_rvr_description)/robot/sphero_rvr_in_world.urdf.xacro name:=$(arg robot_name)" />
+             <rosparam param="source_list" subst_value="True">[/$(arg robot_name)/joint_states]</rosparam>
+          </node>
+        </group>
+
+        <param name="publish_frequency" value="100"/>
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  />
+    </group>
+
+    <group if="$(arg use_rviz)">
+        <node name="my_rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find sphero_rvr_description)/launch/rviz_config.rviz" output="screen"/>
+    </group>
+
+</launch>

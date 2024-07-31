@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:macro name="sphero_rvr_transmission_sim" params="name">
+		<!-- Specific transmission interfaces values for simulation -->
+		<xacro:property name="SimInterface10" value="hardware_interface/PositionJointInterface"/>
+		<xacro:property name="SimInterface30" value="hardware_interface/EffortJointInterface"/>
+		<xacro:property name="SimInterfaceVel" value="hardware_interface/VelocityJointInterface"/>
+
+		<transmission name="${name}_wheel_fl_joint_trans">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_wheel_fl_joint">
+				<hardwareInterface>${SimInterfaceVel}</hardwareInterface>
+			</joint>
+			<actuator name="${name}_wheel_fl_joint_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${name}_wheel_fr_joint_trans">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_wheel_fr_joint">
+				<hardwareInterface>${SimInterfaceVel}</hardwareInterface>
+			</joint>
+			<actuator name="${name}_wheel_fr_joint_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${name}_wheel_rl_joint_trans">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_wheel_rl_joint">
+				<hardwareInterface>${SimInterfaceVel}</hardwareInterface>
+			</joint>
+			<actuator name="${name}_wheel_rl_joint_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${name}_wheel_rr_joint_trans">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_wheel_rr_joint">
+				<hardwareInterface>${SimInterfaceVel}</hardwareInterface>
+			</joint>
+			<actuator name="${name}_wheel_rr_joint_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+	</xacro:macro>
+</robot>

@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" >
+
+  <xacro:include filename="$(find sphero_rvr_description)/model/materials.urdf"/>
+  <xacro:include filename="$(find sphero_rvr_description)/model/sphero_rvr.inertia.xacro"/>
+  <xacro:include filename="$(find sphero_rvr_description)/model/sphero_rvr.transmission.xacro"/>
+  <!-- Contains macro to create transmissions for simulation -->
+  <xacro:include filename="$(find sphero_rvr_description)/model/sphero_rvr.transmission.gazebo.xacro"/>
+
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+  <xacro:property name="velocity_scale_factor" value="1.0"/>
+  
+  <xacro:macro name="sphero_rvr" params="parent name *origin sim:=^|false">
+
+
+    <!-- The base fixed to its parent. -->
+    <joint name="${parent}_${name}_base_joint" type="fixed">
+      <xacro:insert_block name="origin"/>
+      <parent link="${parent}"/>
+      <child link="${name}_base_link"/>
+    </joint>
+    
+    <link name="${name}_base_link">
+      <inertial>
+        <xacro:insert_block name="negligible_inertia"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.017 -0.101 0.017" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://sphero_rvr_description/meshes/Sphero_Base.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+        <material name="SpheroRVR/White"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.13 0.06"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <!-- Left Front/Rear Wheel -->
+    <joint name="${name}_wheel_fl_joint" type="fixed">
+      <origin xyz="0.059 0.09 0.03" rpy="0 90 0"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="30" velocity="1.0" />
+      <safety_controller k_velocity="10" k_position="15"  />
+      <dynamics friction="1.0" damping="1.0"/>
+      <parent link="${name}_base_link"/>
+      <child link="${name}_wheel_fl_link"/>
+    </joint>
+
+    <joint name="${name}_wheel_rl_joint" type="fixed">
+      <origin xyz="-0.059 0.09 0.03" rpy="0 0 0"/>
+      <mimic joint="${name}_wheel_fl_joint" multiplier="1" offset="0" /> 
+      <axis xyz="0 1 0"/>
+      <limit effort="30" velocity="1.0" />
+      <safety_controller k_velocity="10" k_position="15"  />
+      <dynamics friction="1.0" damping="1.0"/>
+      <parent link="${name}_base_link"/>
+      <child link="${name}_wheel_rl_link"/>
+    </joint>
+
+    <link name="${name}_wheel_fl_link">
+      <inertial>
+        <xacro:insert_block name="negligible_inertia"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.042 0 -0.033" rpy="0 0 0"/>
+        <geometry>
+           <mesh filename="package://sphero_rvr_description/meshes/Sphero_Wheel_L.stl" scale="0.001 0.001 0.001" /> 
+        </geometry>
+        <material name="SpheroRVR/White"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0 0.0" rpy="${M_PI/2} 0 0"/>
+        <geometry>
+          <cylinder radius="0.033" length="0.03"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${name}_wheel_rl_link">
+      <inertial>
+        <xacro:insert_block name="negligible_inertia"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.042 0 -0.033" rpy="0 0 0"/>
+        <geometry>
+           <mesh filename="package://sphero_rvr_description/meshes/Sphero_Wheel_L.stl" scale="0.001 0.001 0.001" /> 
+        </geometry>
+        <material name="SpheroRVR/White"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0 0.0" rpy="${M_PI/2} 0 0"/>
+        <geometry>
+          <cylinder radius="0.033" length="0.03"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Right Front/Rear Wheel -->
+    <joint name="${name}_wheel_fr_joint" type="fixed">
+      <origin xyz="0.059 -0.09 0.03" rpy="0 90 0"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="30" velocity="1.0" />
+      <safety_controller k_velocity="10" k_position="15"  />
+      <dynamics friction="1.0" damping="1.0"/>
+      <parent link="${name}_base_link"/>
+      <child link="${name}_wheel_fr_link"/>
+    </joint>
+
+    <joint name="${name}_wheel_rr_joint" type="fixed">
+      <origin xyz="-0.059 -0.09 0.03" rpy="0 0 0"/>
+      <mimic joint="${name}_wheel_fr_joint" multiplier="1" offset="0" /> 
+      <axis xyz="0 1 0"/>
+      <limit effort="30" velocity="1.0" />
+      <safety_controller k_velocity="10" k_position="15"  />
+      <dynamics friction="1.0" damping="1.0"/>
+      <parent link="${name}_base_link"/>
+      <child link="${name}_wheel_rr_link"/>
+    </joint>
+
+    <link name="${name}_wheel_fr_link">
+      <inertial>
+        <xacro:insert_block name="negligible_inertia"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.042 0 -0.033" rpy="0 0 0"/>
+        <geometry>
+           <mesh filename="package://sphero_rvr_description/meshes/Sphero_Wheel_R.stl" scale="0.001 0.001 0.001" /> 
+        </geometry>
+        <material name="SpheroRVR/White"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0 0.0" rpy="${M_PI/2} 0 0"/>
+        <geometry>
+          <cylinder radius="0.033" length="0.03"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${name}_wheel_rr_link">
+      <inertial>
+        <xacro:insert_block name="negligible_inertia"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.042 0 -0.033" rpy="0 0 0"/>
+        <geometry>
+           <mesh filename="package://sphero_rvr_description/meshes/Sphero_Wheel_R.stl" scale="0.001 0.001 0.001" /> 
+        </geometry>
+        <material name="SpheroRVR/White"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0 0.0" rpy="${M_PI/2} 0 0"/>
+        <geometry>
+          <cylinder radius="0.033" length="0.03"/>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Default use normal transmissions in real world-->
+    <xacro:unless value="${sim}">
+      <xacro:sphero_rvr_transmission name="${name}"/>
+    </xacro:unless>
+    <!-- Use these transmissions when using gazebo/sim-->
+    <xacro:if value="${sim}">
+      <xacro:sphero_rvr_transmission_sim name="${name}"/>
+    </xacro:if>
+  </xacro:macro>
+
+</robot>

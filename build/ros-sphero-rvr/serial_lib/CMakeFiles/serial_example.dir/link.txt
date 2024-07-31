@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/serial_example.dir/examples/serial_example.cc.o  -o /home/sphero/sp/devel/lib/serial/serial_example  -Wl,-rpath,/home/sphero/sp/devel/lib /home/sphero/sp/devel/lib/libserial.so -lrt -lpthread 

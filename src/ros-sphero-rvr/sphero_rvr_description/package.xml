@@ -1,0 +1,18 @@
+<package format="2">
+  <name>sphero_rvr_description</name>
+  <version>0.0.2</version>
+  <description>
+    Sphero RVR Description package.
+  </description>
+  <maintainer email="simon.haller-seeber@uibk.ac.at">Simon M. Haller-Seeber</maintainer>
+  <license>GPLv3</license>
+
+  <author email="simon.haller-seeber@uibk.ac.at">Simon Haller-Seeber</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>tf</depend>
+
+  <export>
+  </export>
+</package>

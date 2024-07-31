@@ -1,0 +1,8 @@
+prefix=/home/sphero/sp/install
+
+Name: sphero_rvr_msgs
+Description: Description of sphero_rvr_msgs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_generation message_runtime

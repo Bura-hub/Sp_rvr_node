@@ -1,0 +1,8 @@
+prefix=/home/sphero/sp/install
+
+Name: sphero_rvr_description
+Description: Description of sphero_rvr_description
+Version: 0.0.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp tf

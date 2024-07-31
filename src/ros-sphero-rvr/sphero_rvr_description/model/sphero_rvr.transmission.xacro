@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<xacro:property name="Interface10" value="PositionJointInterface"/>
+	<xacro:property name="Interface30" value="EffortJointInterface"/>
+
+	<xacro:macro name="sphero_rvr_transmission" params="name">
+
+		<transmission name="${name}_wheel_fl_joint_trans">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_wheel_fl_joint">
+				<hardwareInterface>${Interface10}</hardwareInterface>
+			</joint>
+			<actuator name="${name}_wheel_fl_joint_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${name}_wheel_fr_joint_trans">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_wheel_fr_joint">
+				<hardwareInterface>${Interface10}</hardwareInterface>
+			</joint>
+			<actuator name="${name}_wheel_fr_joint_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${name}_wheel_rl_joint_trans">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_wheel_rl_joint">
+				<hardwareInterface>${Interface10}</hardwareInterface>
+			</joint>
+			<actuator name="${name}_wheel_rl_joint_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+		<transmission name="${name}_wheel_rr_joint_trans">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${name}_wheel_rr_joint">
+				<hardwareInterface>${Interface10}</hardwareInterface>
+			</joint>
+			<actuator name="${name}_wheel_rr_joint_motor">
+				<mechanicalReduction>1.0</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+	</xacro:macro>
+
+</robot>
