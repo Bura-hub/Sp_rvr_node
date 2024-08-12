@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import rospy
 import geometry_msgs.msg
 import time
@@ -5,7 +7,7 @@ import math
 from sphero_rvr_msgs.srv import MoveToPosAndYaw, MoveToPosAndYawRequest
 
 def start_stop_test():
-    topic = "/minibot/rvr/cmd_vel"
+    topic = "/cmd_vel"
     pub = rospy.Publisher(topic, geometry_msgs.msg.Twist, queue_size=10)
     rate = rospy.Rate(10)
     twist = geometry_msgs.msg.Twist()
@@ -43,7 +45,7 @@ def test_cmd_vel():
 
 
 def call_move_to_pos_and_yaw(pos, yaw, speed=1.5, speed_in_si=True, frame_id="world"):
-    service = "/minibot/rvr/move_to_pos_and_yaw"
+    service = "/move_to_pos_and_yaw"
 
     req = MoveToPosAndYawRequest()
     req.header.frame_id = frame_id

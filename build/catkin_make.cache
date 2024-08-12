@@ -1,2 +1,2 @@
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs:ros-sphero-rvr/serial_lib:ros-sphero-rvr/sphero_rvr:ros-sphero-rvr/sphero_rvr_description:ros-sphero-rvr/sphero_rvr_hw:ros-sphero-rvr/sphero_rvr_movement
+ros-sphero-rvr/minibot_msgs/minibot_msgs:ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs:ros-sphero-rvr/serial_lib:ros-sphero-rvr/sphero_rvr:ros-sphero-rvr/sphero_rvr_description:ros-sphero-rvr/sphero_rvr_hw:ros-sphero-rvr/sphero_rvr_movement
 -DCATKIN_DEVEL_PREFIX=/home/sphero/sp/devel -DCMAKE_INSTALL_PREFIX=/home/sphero/sp/install -G Unix Makefiles

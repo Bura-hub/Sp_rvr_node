@@ -1,4 +1,7 @@
 # Hashes of file build rules.
+5f2709435eeb77e2b5dab184fc0a1559 /home/sphero/sp/devel/include/minibot_msgs/AddVisibleObjects.h
+b59b8af48500273c0f04ad3fc4a28d46 /home/sphero/sp/devel/include/minibot_msgs/segment_sign_command.h
+4db476262e634b46368380752c628b32 /home/sphero/sp/devel/include/minibot_msgs/set_url.h
 3e68188c32f790d4b185d3949ac2046f /home/sphero/sp/devel/include/sphero_rvr_msgs/BatteryState.h
 87a70b84cebc992009ca180e9eb253ab /home/sphero/sp/devel/include/sphero_rvr_msgs/Color.h
 8172ca1db38c5734aa45792952cfb467 /home/sphero/sp/devel/include/sphero_rvr_msgs/MoveToPosAndYaw.h
@@ -6,6 +9,10 @@
 611098fbfe60c80414e8bf4e1e455b8e /home/sphero/sp/devel/include/sphero_rvr_msgs/SetLeds.h
 c4b9ecdcb0f75e38ca5d10f4bbd3dab4 /home/sphero/sp/devel/include/sphero_rvr_msgs/SetPosAndYaw.h
 f2b2abffc8aad1781eb842ba52498a42 /home/sphero/sp/devel/include/sphero_rvr_msgs/TriggerLedEvent.h
+b448c6567467a465d47a5f297c717365 /home/sphero/sp/devel/lib/python3/dist-packages/minibot_msgs/srv/_AddVisibleObjects.py
+80f9b61b9164b0365938726bd66521fb /home/sphero/sp/devel/lib/python3/dist-packages/minibot_msgs/srv/__init__.py
+4fe4b199df8c2ef13351e23918bc1725 /home/sphero/sp/devel/lib/python3/dist-packages/minibot_msgs/srv/_segment_sign_command.py
+acead43f614df179f2bdfe7083cbc4a5 /home/sphero/sp/devel/lib/python3/dist-packages/minibot_msgs/srv/_set_url.py
 8ffdf0f3622f2886b4d1e37147a2c410 /home/sphero/sp/devel/lib/python3/dist-packages/sphero_rvr_msgs/msg/_Color.py
 d0a4c1e4d3ab631c060621f355938fac /home/sphero/sp/devel/lib/python3/dist-packages/sphero_rvr_msgs/msg/__init__.py
 8a965caa378717189fca1ab81fbad008 /home/sphero/sp/devel/lib/python3/dist-packages/sphero_rvr_msgs/srv/_BatteryState.py
@@ -15,6 +22,9 @@ e818312fc4f88d976d7d199a3b680ac8 /home/sphero/sp/devel/lib/python3/dist-packages
 881fbd10040d18e73a42c866b2cf5169 /home/sphero/sp/devel/lib/python3/dist-packages/sphero_rvr_msgs/srv/_SetPosAndYaw.py
 d945c4a8aca4295180379d85f9583e87 /home/sphero/sp/devel/lib/python3/dist-packages/sphero_rvr_msgs/srv/_TriggerLedEvent.py
 c9f4e1bb9aac51d8d2d9417ef86d62e5 /home/sphero/sp/devel/lib/python3/dist-packages/sphero_rvr_msgs/srv/__init__.py
+7eedfc913d33d96f5841a232422cbecb /home/sphero/sp/devel/share/common-lisp/ros/minibot_msgs/srv/AddVisibleObjects.lisp
+5c0f9de906f2fd87e5407ec52e673f84 /home/sphero/sp/devel/share/common-lisp/ros/minibot_msgs/srv/segment_sign_command.lisp
+af7029e1b87f29645bf7dfb05235675a /home/sphero/sp/devel/share/common-lisp/ros/minibot_msgs/srv/set_url.lisp
 ca4daf7f0cd860a4152f463c1125129a /home/sphero/sp/devel/share/common-lisp/ros/sphero_rvr_msgs/msg/Color.lisp
 a9b0ed873257ebf932242a8c2a828b3c /home/sphero/sp/devel/share/common-lisp/ros/sphero_rvr_msgs/srv/BatteryState.lisp
 161491807adfd7603b6fdf078d6127ce /home/sphero/sp/devel/share/common-lisp/ros/sphero_rvr_msgs/srv/MoveToPosAndYaw.lisp
@@ -22,6 +32,9 @@ a9b0ed873257ebf932242a8c2a828b3c /home/sphero/sp/devel/share/common-lisp/ros/sph
 36a56186a6c84c8904c548d9304beed6 /home/sphero/sp/devel/share/common-lisp/ros/sphero_rvr_msgs/srv/SetLeds.lisp
 facb28d7162702dd025b512dbc6ebf7b /home/sphero/sp/devel/share/common-lisp/ros/sphero_rvr_msgs/srv/SetPosAndYaw.lisp
 2c0913fb0a318b96895e9ea9707aa254 /home/sphero/sp/devel/share/common-lisp/ros/sphero_rvr_msgs/srv/TriggerLedEvent.lisp
+0157706c1472fabfeffedab432d9b441 /home/sphero/sp/devel/share/gennodejs/ros/minibot_msgs/srv/AddVisibleObjects.js
+2b7872d0ca332c750107f7df9949b480 /home/sphero/sp/devel/share/gennodejs/ros/minibot_msgs/srv/segment_sign_command.js
+875335a2e6f99bdadc83d1ad93733cc2 /home/sphero/sp/devel/share/gennodejs/ros/minibot_msgs/srv/set_url.js
 cf9a74b4d90022ce4786cff187506b2f /home/sphero/sp/devel/share/gennodejs/ros/sphero_rvr_msgs/msg/Color.js
 6f7af2bf93fa22bdc6eab00b20937e5e /home/sphero/sp/devel/share/gennodejs/ros/sphero_rvr_msgs/srv/BatteryState.js
 07111f42fb02bdb77199d36cedd04647 /home/sphero/sp/devel/share/gennodejs/ros/sphero_rvr_msgs/srv/MoveToPosAndYaw.js
@@ -29,6 +42,10 @@ cf9a74b4d90022ce4786cff187506b2f /home/sphero/sp/devel/share/gennodejs/ros/spher
 1b7c69e66d8300ffb962861f3ea057e4 /home/sphero/sp/devel/share/gennodejs/ros/sphero_rvr_msgs/srv/SetLeds.js
 34450d9f16e99d7e907735bf3086c77c /home/sphero/sp/devel/share/gennodejs/ros/sphero_rvr_msgs/srv/SetPosAndYaw.js
 63cfc96b3c25b5298d1b702c5ffc7a79 /home/sphero/sp/devel/share/gennodejs/ros/sphero_rvr_msgs/srv/TriggerLedEvent.js
+bc87283a0fccdd1bcc955a1a030d3464 /home/sphero/sp/devel/share/roseus/ros/minibot_msgs/manifest.l
+f890823e7d70d20352c49f399c9858e1 /home/sphero/sp/devel/share/roseus/ros/minibot_msgs/srv/AddVisibleObjects.l
+27cd21613974d1c3eb4756d8cd7ace1a /home/sphero/sp/devel/share/roseus/ros/minibot_msgs/srv/segment_sign_command.l
+0e30c2766553ed45f4d16083f1732c64 /home/sphero/sp/devel/share/roseus/ros/minibot_msgs/srv/set_url.l
 8f7e5b2fc5c605ca935a3da0b76a4247 /home/sphero/sp/devel/share/roseus/ros/sphero_rvr_msgs/manifest.l
 419580213232d7201bc395db26ac87ee /home/sphero/sp/devel/share/roseus/ros/sphero_rvr_msgs/msg/Color.l
 9b156e42e082f1f439eca216d35b837f /home/sphero/sp/devel/share/roseus/ros/sphero_rvr_msgs/srv/BatteryState.l
@@ -38,12 +55,20 @@ a047a00f281dfecfb4f7651d28d53eb7 /home/sphero/sp/devel/share/roseus/ros/sphero_r
 c18e7f4658441fecf25dcde48799dcfc /home/sphero/sp/devel/share/roseus/ros/sphero_rvr_msgs/srv/SetPosAndYaw.l
 2f40ebbab5fd822b44ee47c9d92189df /home/sphero/sp/devel/share/roseus/ros/sphero_rvr_msgs/srv/TriggerLedEvent.l
 581db4c7133872ef205a31ecd7230702 CMakeFiles/clean_test_results
+05a062dc96dec25cdc22784d7a868ed9 ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/_minibot_msgs_generate_messages_check_deps_AddVisibleObjects
+eb783164fab5e946bae31d5943401f1e ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/_minibot_msgs_generate_messages_check_deps_segment_sign_command
+002cace4d7c306de157fa8c30d262390 ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/_minibot_msgs_generate_messages_check_deps_set_url
+705640904101df744719545c8b66431d ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_cpp
+705640904101df744719545c8b66431d ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_eus
+705640904101df744719545c8b66431d ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_lisp
+705640904101df744719545c8b66431d ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_nodejs
+705640904101df744719545c8b66431d ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_py
 3b9619877ad9b91ad44c5b2f0a9978cd ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState
 dbae2bd2a00b407456d989ab87a73b03 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color
-892faa6001e0a0dd40a26484912d620a ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPosAndYaw
+7207342feabfe299cf589993d614f697 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPosAndYaw
 b39d06e698803f252f49039a34aec594 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose
 b6fd571678239c9d6691581ddf4baf6c ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds
-f38252430c339c55f5ba8c3136d920d1 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
+b35255c0b4561dc34783a66065582e7b ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
 93bf4de70b66ec3c06e3a14dc19c48e6 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_TriggerLedEvent
 92fcb628bd08b9b9538525583cfa7142 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_cpp
 92fcb628bd08b9b9538525583cfa7142 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_eus

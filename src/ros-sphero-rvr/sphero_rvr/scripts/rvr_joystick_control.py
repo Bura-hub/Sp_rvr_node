@@ -51,9 +51,9 @@ def timer_callback(event):
     cmd_vel_pub.publish(current_twist)
 
 def set_leds(rgb_color):
-    rospy.wait_for_service('/rvr/set_leds')
+    rospy.wait_for_service('/set_leds')
     try:
-        set_leds_srv = rospy.ServiceProxy('/rvr/set_leds', SetLeds)
+        set_leds_srv = rospy.ServiceProxy('/set_leds', SetLeds)
         request = SetLedsRequest()
         request.rgb_color = rgb_color
         response = set_leds_srv(request)
@@ -65,7 +65,7 @@ def listener():
     global cmd_vel_pub
 
     rospy.init_node('rvr_joystick_control')
-    cmd_vel_pub = rospy.Publisher('/rvr/cmd_vel', Twist, queue_size=10)
+    cmd_vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
     rospy.Subscriber("/joy", Joy, joystick_callback)
 
     # Configurar un temporizador para publicar los comandos periódicamente

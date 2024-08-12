@@ -7,6 +7,7 @@
 subdirs("gtest")
 subdirs("ros-sphero-rvr/serial_lib")
 subdirs("ros-sphero-rvr/sphero_rvr")
+subdirs("ros-sphero-rvr/minibot_msgs/minibot_msgs")
 subdirs("ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs")
 subdirs("ros-sphero-rvr/sphero_rvr_movement")
 subdirs("ros-sphero-rvr/sphero_rvr_description")

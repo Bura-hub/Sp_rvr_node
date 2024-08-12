@@ -56,30 +56,6 @@ CMAKE_BINARY_DIR = /home/sphero/sp/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -112,6 +88,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -124,16 +111,29 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
-.PHONY : test/fast
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,19 +168,94 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/rule
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/rule
 
 # Convenience name for target.
-_sphero_rvr_msgs_generate_messages_check_deps_SetLeds: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/rule
+sphero_rvr_msgs_generate_messages: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/rule
 
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetLeds
+.PHONY : sphero_rvr_msgs_generate_messages
 
 # fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_SetLeds/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetLeds/fast
+sphero_rvr_msgs_generate_messages/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/build
+.PHONY : sphero_rvr_msgs_generate_messages/fast
+
+# Convenience name for target.
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/rule
+
+# Convenience name for target.
+sphero_rvr_msgs_genpy: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/rule
+
+.PHONY : sphero_rvr_msgs_genpy
+
+# fast build rule for target.
+sphero_rvr_msgs_genpy/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/build
+.PHONY : sphero_rvr_msgs_genpy/fast
+
+# Convenience name for target.
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+sphero_rvr_msgs_gennodejs: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/rule
+
+.PHONY : sphero_rvr_msgs_gennodejs
+
+# fast build rule for target.
+sphero_rvr_msgs_gennodejs/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/build
+.PHONY : sphero_rvr_msgs_gennodejs/fast
+
+# Convenience name for target.
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/rule
+
+# Convenience name for target.
+_sphero_rvr_msgs_generate_messages_check_deps_Color: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/rule
+
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_Color
+
+# fast build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_Color/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_Color/fast
+
+# Convenience name for target.
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/rule
+
+# Convenience name for target.
+_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/rule
+
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
+
+# fast build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw/fast
+
+# Convenience name for target.
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/rule
+
+# Convenience name for target.
+sphero_rvr_msgs_geneus: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/rule
+
+.PHONY : sphero_rvr_msgs_geneus
+
+# fast build rule for target.
+sphero_rvr_msgs_geneus/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/build
+.PHONY : sphero_rvr_msgs_geneus/fast
 
 # Convenience name for target.
 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_nodejs.dir/rule:
@@ -198,34 +273,19 @@ sphero_rvr_msgs_generate_messages_nodejs/fast:
 .PHONY : sphero_rvr_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_nodejs: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+_sphero_rvr_msgs_generate_messages_check_deps_SetLeds: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_nodejs
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetLeds
 
 # fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
+_sphero_rvr_msgs_generate_messages_check_deps_SetLeds/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetLeds/fast
 
 # Convenience name for target.
 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_eus.dir/rule:
@@ -243,64 +303,64 @@ sphero_rvr_msgs_generate_messages_eus/fast:
 .PHONY : sphero_rvr_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_py: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+sphero_rvr_msgs_genlisp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_py
+.PHONY : sphero_rvr_msgs_genlisp
 
 # fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
+sphero_rvr_msgs_genlisp/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/build
+.PHONY : sphero_rvr_msgs_genlisp/fast
 
 # Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/rule
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-sphero_rvr_msgs_generate_messages: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/rule
+sphero_rvr_msgs_generate_messages_lisp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : sphero_rvr_msgs_generate_messages
+.PHONY : sphero_rvr_msgs_generate_messages_lisp
 
 # fast build rule for target.
-sphero_rvr_msgs_generate_messages/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages.dir/build
-.PHONY : sphero_rvr_msgs_generate_messages/fast
+sphero_rvr_msgs_generate_messages_lisp/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/build
+.PHONY : sphero_rvr_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_lisp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_lisp
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose
 
 # fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
+_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose/fast
 
 # Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_eus: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+_sphero_rvr_msgs_generate_messages_check_deps_BatteryState: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/rule
 
-.PHONY : std_msgs_generate_messages_eus
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_BatteryState
 
 # fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+_sphero_rvr_msgs_generate_messages_check_deps_BatteryState/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_BatteryState/fast
 
 # Convenience name for target.
 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPosAndYaw.dir/rule:
@@ -333,229 +393,19 @@ _sphero_rvr_msgs_generate_messages_check_deps_TriggerLedEvent/fast:
 .PHONY : _sphero_rvr_msgs_generate_messages_check_deps_TriggerLedEvent/fast
 
 # Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/rule
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-sphero_rvr_msgs_gencpp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/rule
+sphero_rvr_msgs_generate_messages_py: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/rule
 
-.PHONY : sphero_rvr_msgs_gencpp
+.PHONY : sphero_rvr_msgs_generate_messages_py
 
 # fast build rule for target.
-sphero_rvr_msgs_gencpp/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/build
-.PHONY : sphero_rvr_msgs_gencpp/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/rule
-
-# Convenience name for target.
-sphero_rvr_msgs_gennodejs: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/rule
-
-.PHONY : sphero_rvr_msgs_gennodejs
-
-# fast build rule for target.
-sphero_rvr_msgs_gennodejs/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/build
-.PHONY : sphero_rvr_msgs_gennodejs/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/rule
-
-# Convenience name for target.
-sphero_rvr_msgs_genpy: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/rule
-
-.PHONY : sphero_rvr_msgs_genpy
-
-# fast build rule for target.
-sphero_rvr_msgs_genpy/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/build
-.PHONY : sphero_rvr_msgs_genpy/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/rule
-
-# Convenience name for target.
-sphero_rvr_msgs_geneus: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/rule
-
-.PHONY : sphero_rvr_msgs_geneus
-
-# fast build rule for target.
-sphero_rvr_msgs_geneus/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/build
-.PHONY : sphero_rvr_msgs_geneus/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/rule
-
-# Convenience name for target.
-_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/rule
-
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose
-
-# fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sphero_rvr_msgs_generate_messages_lisp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sphero_rvr_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sphero_rvr_msgs_generate_messages_lisp/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/build
-.PHONY : sphero_rvr_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/rule
-
-# Convenience name for target.
-sphero_rvr_msgs_genlisp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/rule
-
-.PHONY : sphero_rvr_msgs_genlisp
-
-# fast build rule for target.
-sphero_rvr_msgs_genlisp/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/build
-.PHONY : sphero_rvr_msgs_genlisp/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/rule
-
-# Convenience name for target.
-_sphero_rvr_msgs_generate_messages_check_deps_Color: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/rule
-
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_Color
-
-# fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_Color/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_Color/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/rule
-
-# Convenience name for target.
-_sphero_rvr_msgs_generate_messages_check_deps_BatteryState: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/rule
-
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_BatteryState
-
-# fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_BatteryState/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_BatteryState/fast
-
-# Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/rule
-
-# Convenience name for target.
-_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/rule
-
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
-
-# fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw/fast
+sphero_rvr_msgs_generate_messages_py/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/build
+.PHONY : sphero_rvr_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_cpp.dir/rule:
@@ -573,19 +423,19 @@ sphero_rvr_msgs_generate_messages_cpp/fast:
 .PHONY : sphero_rvr_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/rule:
-	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/rule
-.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/rule
+ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/rule:
+	cd /home/sphero/sp/build && $(MAKE) -f CMakeFiles/Makefile2 ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/rule
+.PHONY : ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/rule
 
 # Convenience name for target.
-sphero_rvr_msgs_generate_messages_py: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/rule
+sphero_rvr_msgs_gencpp: ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/rule
 
-.PHONY : sphero_rvr_msgs_generate_messages_py
+.PHONY : sphero_rvr_msgs_gencpp
 
 # fast build rule for target.
-sphero_rvr_msgs_generate_messages_py/fast:
-	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/build
-.PHONY : sphero_rvr_msgs_generate_messages_py/fast
+sphero_rvr_msgs_gencpp/fast:
+	cd /home/sphero/sp/build && $(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/build
+.PHONY : sphero_rvr_msgs_gencpp/fast
 
 # Help Target
 help:
@@ -593,41 +443,31 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_SetLeds"
-	@echo "... sphero_rvr_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... sphero_rvr_msgs_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... test"
 	@echo "... sphero_rvr_msgs_generate_messages"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_eus"
+	@echo "... sphero_rvr_msgs_genpy"
+	@echo "... sphero_rvr_msgs_gennodejs"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_Color"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw"
+	@echo "... install/strip"
+	@echo "... sphero_rvr_msgs_geneus"
+	@echo "... sphero_rvr_msgs_generate_messages_nodejs"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_SetLeds"
+	@echo "... sphero_rvr_msgs_generate_messages_eus"
+	@echo "... sphero_rvr_msgs_genlisp"
+	@echo "... sphero_rvr_msgs_generate_messages_lisp"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_BatteryState"
+	@echo "... install"
 	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_MoveToPosAndYaw"
 	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_TriggerLedEvent"
-	@echo "... sphero_rvr_msgs_gencpp"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... install/strip"
-	@echo "... sphero_rvr_msgs_gennodejs"
-	@echo "... sphero_rvr_msgs_genpy"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... sphero_rvr_msgs_geneus"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose"
-	@echo "... sphero_rvr_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... sphero_rvr_msgs_genlisp"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_Color"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_BatteryState"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw"
-	@echo "... sphero_rvr_msgs_generate_messages_cpp"
 	@echo "... sphero_rvr_msgs_generate_messages_py"
-	@echo "... test"
+	@echo "... sphero_rvr_msgs_generate_messages_cpp"
+	@echo "... install/local"
+	@echo "... sphero_rvr_msgs_gencpp"
 .PHONY : help
 
 

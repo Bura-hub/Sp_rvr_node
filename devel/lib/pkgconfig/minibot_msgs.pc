@@ -1,0 +1,8 @@
+prefix=/home/sphero/sp/devel
+
+Name: minibot_msgs
+Description: Description of minibot_msgs
+Version: 0.0.0
+Cflags: -I/home/sphero/sp/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_generation message_runtime

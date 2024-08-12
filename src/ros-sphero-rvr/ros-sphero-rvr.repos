@@ -1,0 +1,5 @@
+repositories:
+    ros-sphero-rvr-msgs:
+        type: git
+        url: https://git.uibk.ac.at/informatik/stair/ros-sphero-rvr-msgs.git
+        version: main

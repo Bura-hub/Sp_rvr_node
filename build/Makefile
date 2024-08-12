@@ -467,30 +467,17 @@ run_tests_serial_gtest_serial-test-timer/fast:
 .PHONY : run_tests_serial_gtest_serial-test-timer/fast
 
 #=============================================================================
-# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_SetLeds
+# Target rules for targets named _minibot_msgs_generate_messages_check_deps_segment_sign_command
 
 # Build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_SetLeds: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_SetLeds
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetLeds
+_minibot_msgs_generate_messages_check_deps_segment_sign_command: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _minibot_msgs_generate_messages_check_deps_segment_sign_command
+.PHONY : _minibot_msgs_generate_messages_check_deps_segment_sign_command
 
 # fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_SetLeds/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetLeds/fast
-
-#=============================================================================
-# Target rules for targets named sphero_rvr_msgs_generate_messages_nodejs
-
-# Build rule for target.
-sphero_rvr_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_generate_messages_nodejs
-.PHONY : sphero_rvr_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sphero_rvr_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_nodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_nodejs.dir/build
-.PHONY : sphero_rvr_msgs_generate_messages_nodejs/fast
+_minibot_msgs_generate_messages_check_deps_segment_sign_command/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/_minibot_msgs_generate_messages_check_deps_segment_sign_command.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/_minibot_msgs_generate_messages_check_deps_segment_sign_command.dir/build
+.PHONY : _minibot_msgs_generate_messages_check_deps_segment_sign_command/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_nodejs
@@ -502,34 +489,21 @@ geometry_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_cpp
+# Target rules for targets named minibot_msgs_geneus
 
 # Build rule for target.
-geometry_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
-.PHONY : geometry_msgs_generate_messages_cpp
+minibot_msgs_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_geneus
+.PHONY : minibot_msgs_geneus
 
 # fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named sphero_rvr_msgs_generate_messages_eus
-
-# Build rule for target.
-sphero_rvr_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_generate_messages_eus
-.PHONY : sphero_rvr_msgs_generate_messages_eus
-
-# fast build rule for target.
-sphero_rvr_msgs_generate_messages_eus/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_eus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_eus.dir/build
-.PHONY : sphero_rvr_msgs_generate_messages_eus/fast
+minibot_msgs_geneus/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_geneus.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_geneus.dir/build
+.PHONY : minibot_msgs_geneus/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_py
@@ -541,8 +515,268 @@ geometry_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_gennodejs
+
+# Build rule for target.
+minibot_msgs_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_gennodejs
+.PHONY : minibot_msgs_gennodejs
+
+# fast build rule for target.
+minibot_msgs_gennodejs/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_gennodejs.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_gennodejs.dir/build
+.PHONY : minibot_msgs_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
+
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _minibot_msgs_generate_messages_check_deps_set_url
+
+# Build rule for target.
+_minibot_msgs_generate_messages_check_deps_set_url: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _minibot_msgs_generate_messages_check_deps_set_url
+.PHONY : _minibot_msgs_generate_messages_check_deps_set_url
+
+# fast build rule for target.
+_minibot_msgs_generate_messages_check_deps_set_url/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/_minibot_msgs_generate_messages_check_deps_set_url.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/_minibot_msgs_generate_messages_check_deps_set_url.dir/build
+.PHONY : _minibot_msgs_generate_messages_check_deps_set_url/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_genpy
+
+# Build rule for target.
+minibot_msgs_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_genpy
+.PHONY : minibot_msgs_genpy
+
+# fast build rule for target.
+minibot_msgs_genpy/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_genpy.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_genpy.dir/build
+.PHONY : minibot_msgs_genpy/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_generate_messages
+
+# Build rule for target.
+minibot_msgs_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_generate_messages
+.PHONY : minibot_msgs_generate_messages
+
+# fast build rule for target.
+minibot_msgs_generate_messages/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages.dir/build
+.PHONY : minibot_msgs_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
+
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _minibot_msgs_generate_messages_check_deps_AddVisibleObjects
+
+# Build rule for target.
+_minibot_msgs_generate_messages_check_deps_AddVisibleObjects: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _minibot_msgs_generate_messages_check_deps_AddVisibleObjects
+.PHONY : _minibot_msgs_generate_messages_check_deps_AddVisibleObjects
+
+# fast build rule for target.
+_minibot_msgs_generate_messages_check_deps_AddVisibleObjects/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/_minibot_msgs_generate_messages_check_deps_AddVisibleObjects.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/_minibot_msgs_generate_messages_check_deps_AddVisibleObjects.dir/build
+.PHONY : _minibot_msgs_generate_messages_check_deps_AddVisibleObjects/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_generate_messages_cpp
+
+# Build rule for target.
+minibot_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_generate_messages_cpp
+.PHONY : minibot_msgs_generate_messages_cpp
+
+# fast build rule for target.
+minibot_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_cpp.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_cpp.dir/build
+.PHONY : minibot_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_gencpp
+
+# Build rule for target.
+minibot_msgs_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_gencpp
+.PHONY : minibot_msgs_gencpp
+
+# fast build rule for target.
+minibot_msgs_gencpp/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_gencpp.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_gencpp.dir/build
+.PHONY : minibot_msgs_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_generate_messages_py
+
+# Build rule for target.
+minibot_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_generate_messages_py
+.PHONY : minibot_msgs_generate_messages_py
+
+# fast build rule for target.
+minibot_msgs_generate_messages_py/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_py.dir/build
+.PHONY : minibot_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_generate_messages_lisp
+
+# Build rule for target.
+minibot_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_generate_messages_lisp
+.PHONY : minibot_msgs_generate_messages_lisp
+
+# fast build rule for target.
+minibot_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_lisp.dir/build
+.PHONY : minibot_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_generate_messages_eus
+
+# Build rule for target.
+minibot_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_generate_messages_eus
+.PHONY : minibot_msgs_generate_messages_eus
+
+# fast build rule for target.
+minibot_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_eus.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_eus.dir/build
+.PHONY : minibot_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_genlisp
+
+# Build rule for target.
+minibot_msgs_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_genlisp
+.PHONY : minibot_msgs_genlisp
+
+# fast build rule for target.
+minibot_msgs_genlisp/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_genlisp.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_genlisp.dir/build
+.PHONY : minibot_msgs_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named minibot_msgs_generate_messages_nodejs
+
+# Build rule for target.
+minibot_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minibot_msgs_generate_messages_nodejs
+.PHONY : minibot_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+minibot_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_nodejs.dir/build.make ros-sphero-rvr/minibot_msgs/minibot_msgs/CMakeFiles/minibot_msgs_generate_messages_nodejs.dir/build
+.PHONY : minibot_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named sphero_rvr_msgs_generate_messages
@@ -558,30 +792,160 @@ sphero_rvr_msgs_generate_messages/fast:
 .PHONY : sphero_rvr_msgs_generate_messages/fast
 
 #=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_lisp
+# Target rules for targets named sphero_rvr_msgs_genpy
 
 # Build rule for target.
-geometry_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
-.PHONY : geometry_msgs_generate_messages_lisp
+sphero_rvr_msgs_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_genpy
+.PHONY : sphero_rvr_msgs_genpy
 
 # fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
+sphero_rvr_msgs_genpy/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/build
+.PHONY : sphero_rvr_msgs_genpy/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
+# Target rules for targets named sphero_rvr_msgs_gennodejs
 
 # Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
+sphero_rvr_msgs_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_gennodejs
+.PHONY : sphero_rvr_msgs_gennodejs
 
 # fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+sphero_rvr_msgs_gennodejs/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/build
+.PHONY : sphero_rvr_msgs_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_Color
+
+# Build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_Color: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_Color
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_Color
+
+# fast build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_Color/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_Color/fast
+
+#=============================================================================
+# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
+
+# Build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
+
+# fast build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw/fast
+
+#=============================================================================
+# Target rules for targets named sphero_rvr_msgs_geneus
+
+# Build rule for target.
+sphero_rvr_msgs_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_geneus
+.PHONY : sphero_rvr_msgs_geneus
+
+# fast build rule for target.
+sphero_rvr_msgs_geneus/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/build
+.PHONY : sphero_rvr_msgs_geneus/fast
+
+#=============================================================================
+# Target rules for targets named sphero_rvr_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sphero_rvr_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_generate_messages_nodejs
+.PHONY : sphero_rvr_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sphero_rvr_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_nodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_nodejs.dir/build
+.PHONY : sphero_rvr_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_SetLeds
+
+# Build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_SetLeds: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_SetLeds
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetLeds
+
+# fast build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_SetLeds/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetLeds.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetLeds/fast
+
+#=============================================================================
+# Target rules for targets named sphero_rvr_msgs_generate_messages_eus
+
+# Build rule for target.
+sphero_rvr_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_generate_messages_eus
+.PHONY : sphero_rvr_msgs_generate_messages_eus
+
+# fast build rule for target.
+sphero_rvr_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_eus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_eus.dir/build
+.PHONY : sphero_rvr_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named sphero_rvr_msgs_genlisp
+
+# Build rule for target.
+sphero_rvr_msgs_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_genlisp
+.PHONY : sphero_rvr_msgs_genlisp
+
+# fast build rule for target.
+sphero_rvr_msgs_genlisp/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/build
+.PHONY : sphero_rvr_msgs_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named sphero_rvr_msgs_generate_messages_lisp
+
+# Build rule for target.
+sphero_rvr_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_generate_messages_lisp
+.PHONY : sphero_rvr_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sphero_rvr_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/build
+.PHONY : sphero_rvr_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose
+
+# Build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose
+
+# fast build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose/fast
+
+#=============================================================================
+# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_BatteryState
+
+# Build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_BatteryState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_BatteryState
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_BatteryState
+
+# fast build rule for target.
+_sphero_rvr_msgs_generate_messages_check_deps_BatteryState/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/build
+.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_BatteryState/fast
 
 #=============================================================================
 # Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_MoveToPosAndYaw
@@ -610,199 +974,17 @@ _sphero_rvr_msgs_generate_messages_check_deps_TriggerLedEvent/fast:
 .PHONY : _sphero_rvr_msgs_generate_messages_check_deps_TriggerLedEvent/fast
 
 #=============================================================================
-# Target rules for targets named sphero_rvr_msgs_gencpp
+# Target rules for targets named sphero_rvr_msgs_generate_messages_py
 
 # Build rule for target.
-sphero_rvr_msgs_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_gencpp
-.PHONY : sphero_rvr_msgs_gencpp
+sphero_rvr_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_generate_messages_py
+.PHONY : sphero_rvr_msgs_generate_messages_py
 
 # fast build rule for target.
-sphero_rvr_msgs_gencpp/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/build
-.PHONY : sphero_rvr_msgs_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
-
-# Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named sphero_rvr_msgs_gennodejs
-
-# Build rule for target.
-sphero_rvr_msgs_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_gennodejs
-.PHONY : sphero_rvr_msgs_gennodejs
-
-# fast build rule for target.
-sphero_rvr_msgs_gennodejs/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gennodejs.dir/build
-.PHONY : sphero_rvr_msgs_gennodejs/fast
-
-#=============================================================================
-# Target rules for targets named sphero_rvr_msgs_genpy
-
-# Build rule for target.
-sphero_rvr_msgs_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_genpy
-.PHONY : sphero_rvr_msgs_genpy
-
-# fast build rule for target.
-sphero_rvr_msgs_genpy/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genpy.dir/build
-.PHONY : sphero_rvr_msgs_genpy/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
-
-# Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named sphero_rvr_msgs_geneus
-
-# Build rule for target.
-sphero_rvr_msgs_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_geneus
-.PHONY : sphero_rvr_msgs_geneus
-
-# fast build rule for target.
-sphero_rvr_msgs_geneus/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_geneus.dir/build
-.PHONY : sphero_rvr_msgs_geneus/fast
-
-#=============================================================================
-# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose
-
-# Build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose
-
-# fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_MoveToPose.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose/fast
-
-#=============================================================================
-# Target rules for targets named sphero_rvr_msgs_generate_messages_lisp
-
-# Build rule for target.
-sphero_rvr_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_generate_messages_lisp
-.PHONY : sphero_rvr_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sphero_rvr_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_lisp.dir/build
-.PHONY : sphero_rvr_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_eus
-
-# Build rule for target.
-geometry_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
-
-# Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named sphero_rvr_msgs_genlisp
-
-# Build rule for target.
-sphero_rvr_msgs_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_genlisp
-.PHONY : sphero_rvr_msgs_genlisp
-
-# fast build rule for target.
-sphero_rvr_msgs_genlisp/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_genlisp.dir/build
-.PHONY : sphero_rvr_msgs_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_Color
-
-# Build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_Color: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_Color
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_Color
-
-# fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_Color/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_Color.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_Color/fast
-
-#=============================================================================
-# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_BatteryState
-
-# Build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_BatteryState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_BatteryState
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_BatteryState
-
-# fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_BatteryState/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_BatteryState.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_BatteryState/fast
-
-#=============================================================================
-# Target rules for targets named _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
-
-# Build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw
-
-# fast build rule for target.
-_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/_sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw.dir/build
-.PHONY : _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw/fast
+sphero_rvr_msgs_generate_messages_py/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/build
+.PHONY : sphero_rvr_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named sphero_rvr_msgs_generate_messages_cpp
@@ -818,17 +1000,17 @@ sphero_rvr_msgs_generate_messages_cpp/fast:
 .PHONY : sphero_rvr_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named sphero_rvr_msgs_generate_messages_py
+# Target rules for targets named sphero_rvr_msgs_gencpp
 
 # Build rule for target.
-sphero_rvr_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_generate_messages_py
-.PHONY : sphero_rvr_msgs_generate_messages_py
+sphero_rvr_msgs_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sphero_rvr_msgs_gencpp
+.PHONY : sphero_rvr_msgs_gencpp
 
 # fast build rule for target.
-sphero_rvr_msgs_generate_messages_py/fast:
-	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_generate_messages_py.dir/build
-.PHONY : sphero_rvr_msgs_generate_messages_py/fast
+sphero_rvr_msgs_gencpp/fast:
+	$(MAKE) -f ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/build.make ros-sphero-rvr/ros-sphero-rvr-msgs/sphero_rvr_msgs/CMakeFiles/sphero_rvr_msgs_gencpp.dir/build
+.PHONY : sphero_rvr_msgs_gencpp/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
@@ -1737,34 +1919,48 @@ help:
 	@echo "... clean_test_results_serial"
 	@echo "... serial-test-timer"
 	@echo "... run_tests_serial_gtest_serial-test-timer"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_SetLeds"
-	@echo "... sphero_rvr_msgs_generate_messages_nodejs"
+	@echo "... _minibot_msgs_generate_messages_check_deps_segment_sign_command"
 	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... sphero_rvr_msgs_generate_messages_eus"
+	@echo "... minibot_msgs_geneus"
 	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... sphero_rvr_msgs_generate_messages"
+	@echo "... minibot_msgs_gennodejs"
 	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... _minibot_msgs_generate_messages_check_deps_set_url"
 	@echo "... std_msgs_generate_messages_eus"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_MoveToPosAndYaw"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_TriggerLedEvent"
-	@echo "... sphero_rvr_msgs_gencpp"
+	@echo "... minibot_msgs_genpy"
+	@echo "... minibot_msgs_generate_messages"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... sphero_rvr_msgs_gennodejs"
-	@echo "... sphero_rvr_msgs_genpy"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... sphero_rvr_msgs_geneus"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose"
-	@echo "... sphero_rvr_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... sphero_rvr_msgs_genlisp"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... _minibot_msgs_generate_messages_check_deps_AddVisibleObjects"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... minibot_msgs_generate_messages_cpp"
+	@echo "... minibot_msgs_gencpp"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... minibot_msgs_generate_messages_py"
+	@echo "... minibot_msgs_generate_messages_lisp"
+	@echo "... minibot_msgs_generate_messages_eus"
+	@echo "... minibot_msgs_genlisp"
+	@echo "... minibot_msgs_generate_messages_nodejs"
+	@echo "... sphero_rvr_msgs_generate_messages"
+	@echo "... sphero_rvr_msgs_genpy"
+	@echo "... sphero_rvr_msgs_gennodejs"
 	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_Color"
-	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_BatteryState"
 	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_SetPosAndYaw"
-	@echo "... sphero_rvr_msgs_generate_messages_cpp"
+	@echo "... sphero_rvr_msgs_geneus"
+	@echo "... sphero_rvr_msgs_generate_messages_nodejs"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_SetLeds"
+	@echo "... sphero_rvr_msgs_generate_messages_eus"
+	@echo "... sphero_rvr_msgs_genlisp"
+	@echo "... sphero_rvr_msgs_generate_messages_lisp"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_MoveToPose"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_BatteryState"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_MoveToPosAndYaw"
+	@echo "... _sphero_rvr_msgs_generate_messages_check_deps_TriggerLedEvent"
 	@echo "... sphero_rvr_msgs_generate_messages_py"
+	@echo "... sphero_rvr_msgs_generate_messages_cpp"
+	@echo "... sphero_rvr_msgs_gencpp"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"

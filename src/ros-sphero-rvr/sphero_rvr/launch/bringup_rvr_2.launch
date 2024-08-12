@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="robot_name" default="rvr" />
-    <arg name="as_simulation" default="False" />
-    <arg name="as_visualization" default="False" />
+    <arg name="as_simulation" default="True" />
+    <arg name="as_visualization" default="True" />
     <arg name="with_camera" default="False" />
     <arg name="pub_odom_as_tf" default="True" />           <!-- prevents the odom node to publish a separate tf. This is needed when an external tool, eg. ekf is handling the tf publish of the odom frame -->
 

@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+
+from math import pi
+import os
+import sys
+import logging
+import asyncio
+from sphero_sdk import SpheroRvrAsync
+from sphero_sdk import SerialAsyncDal
+from sphero_sdk import RvrStreamingServices
+from sphero_sdk import RawMotorModesEnum
+
+import traceback
+
+import tf
+import rospy
+import signal, sys
+from geometry_msgs.msg import PoseWithCovariance
+from geometry_msgs.msg import Pose
+from geometry_msgs.msg import TwistWithCovariance
+from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Point
+from geometry_msgs.msg import Quaternion
+from geometry_msgs.msg import Vector3
+from nav_msgs.msg import Odometry
+from std_msgs.msg import Header
+from std_msgs.msg import String
+
+
+def lala_cb(mymsg):
+    print("lala")
+
+
+if __name__ == '__main__':
+    print("Starting Sphero RVR HW Python node")
+    rospy.init_node('listener', anonymous=True)
+    rospy.Subscriber("lala", String, lala_cb)
+    br = tf.TransformBroadcaster()
+    r = rospy.Rate(10) # 10hz
+    try:
+        #asyncio.ensure_future(rvr_robot())
+        while not rospy.is_shutdown():
+            #loop.run_until_complete(asyncio.gather(handle_ros()))
+            r.sleep()
+
+        #asyncio.ensure_future(handle_ros())
+        #loop.run_forever()
+
+    except KeyboardInterrupt:
+        print('\nProgram terminated with keyboard interrupt.')
